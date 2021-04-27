@@ -1,0 +1,106 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://free_plane_sprite/png/Plane/Fly (1).png" type="Texture" id=1]
+[ext_resource path="res://free_plane_sprite/png/Plane/Fly (2).png" type="Texture" id=2]
+[ext_resource path="res://free_plane_sprite/png/Plane/Dead (1).png" type="Texture" id=3]
+[ext_resource path="res://plane.gd" type="Script" id=4]
+[ext_resource path="res://Fly (2).png" type="Texture" id=5]
+[ext_resource path="res://Fly (1).png" type="Texture" id=6]
+[ext_resource path="res://kenney_tankspack/Vector/fondo selba.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "girat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": " normal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 52.33
+height = 90.8474
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 113.753, 101.408, 0, 0, 0, 0, 145.753, 101.408, 0, 0, 0, 0, 111.753, 83.408, 0, 0, 0, 0, 141.753, 87.408, 0, 0, 0, 0, 115.753, 99.408 )
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 22.33, 112.191 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 9.23472, 4.80289 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fondo selba" type="Sprite" parent="."]
+position = Vector2( 513.275, 309.392 )
+rotation = 1.94467e-06
+scale = Vector2( 1.45892, 1.56041 )
+texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -8, -90 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+position = Vector2( 160.621, 166.363 )
+scale = Vector2( 0.425584, 0.41546 )
+frames = SubResource( 1 )
+animation = " normal"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 162, 158 )
+rotation = 1.55514
+shape = SubResource( 2 )
+
+[node name="Timerbomb" type="Timer" parent="Area2D"]
+wait_time = 2.065
+autostart = true
+
+[node name="Path2D" type="Path2D" parent="Area2D"]
+position = Vector2( 8, 90 )
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Area2D/Path2D"]
+position = Vector2( 113.753, 101.408 )
+rotation = -1.94774e-06
+scale = Vector2( 1.45892, 1.56041 )
+
+[node name=" lim dreta" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent=" lim dreta"]
+position = Vector2( 1048, 110 )
+shape = SubResource( 4 )
+
+[node name="lim esqurra" type="Area2D" parent="."]
+
+[node name="esquerre" type="CollisionShape2D" parent="lim esqurra"]
+scale = Vector2( -1.44732, 45.1868 )
+shape = SubResource( 5 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( -1.8877, -3.05176e-05 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 516.333, 574.13 )
+scale = Vector2( -56.8752, -6.7878 )
+shape = SubResource( 6 )
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Area2D/Timerbomb" to="Area2D" method="_on_Timerbomb_timeout"]
+[connection signal="area_entered" from="lim esqurra" to="Area2D" method="_on_lim_esqurra_area_entered"]

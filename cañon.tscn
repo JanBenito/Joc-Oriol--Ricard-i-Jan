@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://kenney_tankspack/PNG/Default size/tanks_turret2.png" type="Texture" id=1]
+[ext_resource path="res://cañon.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.40747, 2.56201 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 173.624, 397.195 )
+scale = Vector2( -5.8506, -38.7127 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 174.98, 396.057 )
+rotation = 1.56533
+scale = Vector2( 4.23432, 5.25576 )
+frames = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
