@@ -1,10 +1,10 @@
-extends KinematicBody2D
+extends Area2D
 
 var direccio = Vector2.RIGHT
-var velocitat = 300
+export var velocitat = 1000
 
 func _ready():
-	pass
+	Global.ganivets
 	
 func _process(delta):
 	position += direccio * velocitat * delta
