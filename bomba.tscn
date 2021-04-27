@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://kenney_tankspack/PNG/Retina/tank_bullet4.png" type="Texture" id=1]
+[ext_resource path="res://bomba.gd" type="Script" id=2]
+[ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion3.png" type="Texture" id=3]
+[ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion4.png" type="Texture" id=4]
+[ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion2.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 114.515
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "bobma",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "explosion",
+"speed": 6.0
+} ]
+
+[node name="Area2D" type="Area2D"]
+position = Vector2( 154.749, 54.6752 )
+scale = Vector2( 0.122121, 0.10142 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 47.2806 ]
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 15.8411, 30.2047 )
+scale = Vector2( -1.62325, -2.29495 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 11.0143, 31.1856 )
+rotation = 1.56747
+scale = Vector2( 6.95449, 9.73018 )
+frames = SubResource( 2 )
+animation = "bobma"
+playing = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
