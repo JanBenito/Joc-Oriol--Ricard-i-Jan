@@ -15,7 +15,7 @@ extents = Vector2( 182.973, 135.685 )
 extents = Vector2( 308.811, 140.396 )
 
 [node name="Sprite" type="Sprite"]
-position = Vector2( 521.095, 300.126 )
+position = Vector2( 520.497, 298.93 )
 scale = Vector2( 0.2469, 0.312395 )
 texture = ExtResource( 1 )
 
@@ -26,11 +26,11 @@ scale = Vector2( 4.06645, 3.50156 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0.105228, 844.868 )
+position = Vector2( 4.95044, 846.783 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [node name="Bales" type="Node" parent="."]

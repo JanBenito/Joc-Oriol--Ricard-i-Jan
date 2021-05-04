@@ -93,19 +93,9 @@ animations = [ {
 "name": "Mort",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 59 ), ExtResource( 45 ), ExtResource( 62 ), ExtResource( 68 ), ExtResource( 35 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 34 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 42 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 78 ), ExtResource( 58 ), ExtResource( 72 ), ExtResource( 76 ), ExtResource( 8 ), ExtResource( 66 ), ExtResource( 21 ), ExtResource( 75 ), ExtResource( 46 ), ExtResource( 31 ), ExtResource( 71 ), ExtResource( 47 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Caminar",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 57 ), ExtResource( 81 ), ExtResource( 22 ), ExtResource( 51 ), ExtResource( 40 ), ExtResource( 77 ), ExtResource( 9 ), ExtResource( 37 ), ExtResource( 64 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "LLiscar",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 49 ), ExtResource( 67 ), ExtResource( 14 ), ExtResource( 25 ), ExtResource( 12 ), ExtResource( 61 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 74 ), ExtResource( 27 ), ExtResource( 63 ), ExtResource( 54 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 26 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "Quiet",
+"name": "Saltar",
 "speed": 15.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 73 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 36 ), ExtResource( 52 ), ExtResource( 16 ), ExtResource( 44 ), ExtResource( 38 ), ExtResource( 65 ), ExtResource( 23 ) ],
@@ -113,9 +103,19 @@ animations = [ {
 "name": "Correr",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 24 ), ExtResource( 78 ), ExtResource( 58 ), ExtResource( 72 ), ExtResource( 76 ), ExtResource( 8 ), ExtResource( 66 ), ExtResource( 21 ), ExtResource( 75 ), ExtResource( 46 ), ExtResource( 31 ), ExtResource( 71 ), ExtResource( 47 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 49 ), ExtResource( 67 ), ExtResource( 14 ), ExtResource( 25 ), ExtResource( 12 ), ExtResource( 61 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 74 ), ExtResource( 27 ), ExtResource( 63 ), ExtResource( 54 ), ExtResource( 43 ), ExtResource( 39 ), ExtResource( 26 ), ExtResource( 30 ) ],
 "loop": true,
-"name": "Saltar",
+"name": "Quiet",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 57 ), ExtResource( 81 ), ExtResource( 22 ), ExtResource( 51 ), ExtResource( 40 ), ExtResource( 77 ), ExtResource( 9 ), ExtResource( 37 ), ExtResource( 64 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "LLiscar",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 59 ), ExtResource( 45 ), ExtResource( 62 ), ExtResource( 68 ), ExtResource( 35 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 34 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 42 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Caminar",
 "speed": 15.0
 } ]
 
@@ -132,7 +132,7 @@ script = ExtResource( 85 )
 scale = Vector2( 0.509304, 0.432859 )
 frames = SubResource( 1 )
 animation = "Quiet"
-frame = 7
+frame = 3
 playing = true
 flip_h = true
 
