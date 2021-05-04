@@ -10,7 +10,7 @@ func _ready():
 
 
 func _process(delta):		
-	if Input.get_action_strength("e"):
+	if Input.is_action_just_pressed("e"):
 		dispara()
 		
 	if velocitat.x != 0:
@@ -28,7 +28,7 @@ func dispara():
 	nou_ganivet.global_position = global_position
 	nou_ganivet.direccio = Vector2.RIGHT
 	
-	Global.ganivetes.add_child(nou_ganivet)
+	Global.ganivets.add_child(nou_ganivet)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("espai"):
