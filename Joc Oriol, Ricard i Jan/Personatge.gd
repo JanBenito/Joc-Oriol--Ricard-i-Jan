@@ -14,13 +14,20 @@ func _process(delta):
 		dispara()
 		
 	if velocitat.x != 0:
-		$Sprite_personatge.animation = "correr"
-		$Sprite_personatge.flip_h = velocitat.x <  0
-		$Sprite_personatge.flip_v = false
+		if velocitat.y != 0:
+			$Sprite_personatge.animation = "saltar"
+		else:
+			$Sprite_personatge.animation = "correr"
+			
 	elif velocitat.y != 0:
 		$Sprite_personatge.animation = "saltar"
 	else:
 		$Sprite_personatge.animation = "quiet"
+	if velocitat.x < 0:
+		$Sprite_personatge.flip_h = true
+	else:
+		$Sprite_personatge.flip_h = false
+		
 		
 func dispara():
 	var escena_ganivet = load("res://ganivet.tscn")
