@@ -132,7 +132,11 @@ script = ExtResource( 85 )
 scale = Vector2( 0.509304, 0.432859 )
 frames = SubResource( 1 )
 animation = "Quiet"
+<<<<<<< Updated upstream
 frame = 3
+=======
+frame = 5
+>>>>>>> Stashed changes
 playing = true
 flip_h = true
 

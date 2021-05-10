@@ -16,13 +16,21 @@ extents = Vector2( 27.7178, 20.3688 )
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
+<<<<<<< Updated upstream
 "name": "Normal",
+=======
+"name": "normal",
+>>>>>>> Stashed changes
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": false,
 "name": "Explosió",
+<<<<<<< Updated upstream
 "speed": 30.0
+=======
+"speed": 15.0
+>>>>>>> Stashed changes
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
@@ -47,7 +55,12 @@ shape = SubResource( 2 )
 position = Vector2( -0.0475076, -68.2197 )
 scale = Vector2( 0.71128, 0.614406 )
 frames = SubResource( 3 )
+<<<<<<< Updated upstream
 animation = "Normal"
 
 [node name="Timer" type="Timer" parent="Area2D"]
+=======
+animation = "normal"
+playing = true
+>>>>>>> Stashed changes
 [connection signal="animation_finished" from="Area2D/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
