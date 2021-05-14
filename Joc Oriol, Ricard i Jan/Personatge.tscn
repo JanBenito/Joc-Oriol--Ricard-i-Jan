@@ -107,9 +107,9 @@ animations = [ {
 "name": "atac",
 "speed": 100.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 34 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 37 ), ExtResource( 30 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 50 ), ExtResource( 86 ), ExtResource( 82 ), ExtResource( 84 ), ExtResource( 51 ), ExtResource( 83 ) ],
 "loop": true,
-"name": "atac_saltant",
+"name": "morir",
 "speed": 15.0
 }, {
 "frames": [ ExtResource( 93 ), ExtResource( 98 ), ExtResource( 92 ), ExtResource( 94 ), ExtResource( 96 ), ExtResource( 90 ), ExtResource( 97 ), ExtResource( 95 ), ExtResource( 99 ), ExtResource( 91 ) ],
@@ -117,24 +117,9 @@ animations = [ {
 "name": "volar",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 65 ), ExtResource( 80 ), ExtResource( 66 ), ExtResource( 71 ), ExtResource( 73 ), ExtResource( 67 ), ExtResource( 55 ), ExtResource( 76 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 53 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 63 ), ExtResource( 58 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 61 ), ExtResource( 68 ) ],
 "loop": true,
-"name": "lliscar",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 74 ), ExtResource( 78 ), ExtResource( 81 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 77 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 72 ) ],
-"loop": true,
-"name": "saltar",
-"speed": 9.0
-}, {
-"frames": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 50 ), ExtResource( 86 ), ExtResource( 82 ), ExtResource( 84 ), ExtResource( 51 ), ExtResource( 83 ) ],
-"loop": true,
-"name": "morir",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 39 ), ExtResource( 46 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "correr",
+"name": "atac 2",
 "speed": 15.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
@@ -142,14 +127,29 @@ animations = [ {
 "name": "atac 2 saltant",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 53 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 63 ), ExtResource( 58 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 61 ), ExtResource( 68 ) ],
-"loop": true,
-"name": "atac 2",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 22 ), ExtResource( 10 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "quiet",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 78 ), ExtResource( 81 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 77 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 72 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 9.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 46 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "correr",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 80 ), ExtResource( 66 ), ExtResource( 71 ), ExtResource( 73 ), ExtResource( 67 ), ExtResource( 55 ), ExtResource( 76 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "lliscar",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 34 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 37 ), ExtResource( 30 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "atac_saltant",
 "speed": 15.0
 } ]
 

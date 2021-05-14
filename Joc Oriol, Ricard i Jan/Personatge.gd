@@ -38,8 +38,9 @@ func dispara():
 	Global.ganivets.add_child(nou_ganivet)
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("espai"):
-		velocitat.y = -500
+	if is_on_floor():
+		if Input.is_action_just_pressed("espai"):
+			velocitat.y = -500
 	if Input.is_action_pressed("d"):
 		velocitat.x = 500
 	elif Input.is_action_pressed("a"):
