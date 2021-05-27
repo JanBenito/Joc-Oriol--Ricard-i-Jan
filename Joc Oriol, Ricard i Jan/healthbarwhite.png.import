@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/healthbarwhite.png-2f113602892f0fcb7944f9545d5416c3.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprite neu.jpg"
+source_file="res://healthbarwhite.png"
+dest_files=[ "res://.import/healthbarwhite.png-2f113602892f0fcb7944f9545d5416c3.stex" ]
+
 [params]
 
 compress/mode=0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gift_PNG100327.png" type="Texture" id=1]
 [ext_resource path="res://Regal.gd" type="Script" id=2]
 [ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion2.png" type="Texture" id=3]
 [ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion3.png" type="Texture" id=4]
 [ext_resource path="res://kenney_tankspack/PNG/Default size/tank_explosion4.png" type="Texture" id=5]
+[ext_resource path="res://Area2D.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.4251, 14.2921 )
@@ -14,29 +15,21 @@ extents = Vector2( 27.7178, 20.3688 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-<<<<<<< Updated upstream
-"name": "Normal",
-=======
-"name": "normal",
->>>>>>> Stashed changes
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": false,
 "name": "Explosió",
-<<<<<<< Updated upstream
-"speed": 30.0
-=======
 "speed": 15.0
->>>>>>> Stashed changes
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Sprite_regal" type="Sprite" parent="."]
+[node name="Sprite regal" type="Sprite" parent="."]
 scale = Vector2( 0.0834462, 0.0752419 )
 texture = ExtResource( 1 )
 
@@ -46,21 +39,18 @@ shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -1.21539, 68.6692 )
+script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1.21539, -66.2384 )
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
-position = Vector2( -0.0475076, -68.2197 )
+position = Vector2( -0.0475076, -69.0617 )
 scale = Vector2( 0.71128, 0.614406 )
 frames = SubResource( 3 )
-<<<<<<< Updated upstream
-animation = "Normal"
-
-[node name="Timer" type="Timer" parent="Area2D"]
-=======
 animation = "normal"
 playing = true
->>>>>>> Stashed changes
+
+[node name="Timer" type="Timer" parent="Area2D"]
 [connection signal="animation_finished" from="Area2D/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

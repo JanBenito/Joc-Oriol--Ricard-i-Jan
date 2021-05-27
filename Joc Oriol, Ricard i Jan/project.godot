@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Joc Oriol, Ricard i Jan"
+run/main_scene="res://Nivell Pare Noel.tscn"
 config/icon="res://icon.png"
 
 [autoload]
